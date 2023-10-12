@@ -1,0 +1,1046 @@
+// home
+.home
+	&__btn
+		position: fixed
+		width: 300px
+
+		bottom: 20px
+		right: 15px
+
+		z-index: 2
+
+		border: 3px solid $white
+
+	// main
+	&-main
+		margin-bottom: 25px
+
+		&-wrapper
+			position: relative
+
+			margin: 75px 0
+
+		&-text
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+
+			&__title
+				width: 60%
+
+				font-size: 82px
+
+				margin-top: -25px
+
+			&__description
+				width: 35%
+				font-size: 24px
+
+		&__image
+			margin-top: 75px
+
+			width: 100%
+
+	// forwho
+	&-forwho
+		margin-bottom: 125px
+
+		&__subtitle
+			font-size: 62px
+			color: $mainColor
+
+			margin-bottom: 25px
+
+		&__title
+			width: 80%
+			font-size: 72px
+
+			color: $black
+
+	// skills
+	&-skills
+		background-color: $mainColor
+		padding: 100px
+		color: $white
+
+		margin-bottom: 75px
+
+		&-text
+			display: flex
+			justify-content: space-between
+
+			margin-bottom: 50px
+
+			&__title
+				width: 700px
+
+				font-size: 72px
+				margin-bottom: 25px
+
+				margin-top: -25px
+
+			&__description
+				width: 40%
+
+				font-size: 32px
+
+		&-items-wrapper
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+
+		&-item
+			padding: 35px
+
+			background-color: $white
+			color: $black
+
+			margin-bottom: 20px
+
+			will-change: transform
+
+			+borderRadiusBlock
+			+transition
+
+			&__title
+				font-size: 32px
+
+				line-height: 30px
+
+			&:hover
+				+transformScaleHover
+
+	// lesson
+	&-lessons
+		margin-bottom: 75px
+
+		&-video
+			width: 100%
+
+			+borderRadiusBlock
+
+		&-items-wrapper
+			margin-top: 25px
+
+		&-item
+			display: flex
+
+			padding: 5px 5px 10px 5px
+
+			border: 2px solid $black
+
+			will-change: transform
+
+			margin-bottom: 20px
+
+			+borderRadiusBlock
+			+transition
+
+			&:last-child
+				margin-bottom: 0
+
+			&:hover
+				+transformScaleHover
+
+			&-cover
+				display: flex
+				justify-content: center
+				align-items: center
+
+				position: relative
+
+				height: 350px
+				min-width: 350px
+				width: 350px
+
+				border-radius: 50px
+
+				overflow: hidden
+
+				+backgroundSetting
+
+				&-icon
+					z-index: 2
+
+					& > svg
+						width: 60px
+						height: 60px
+
+				&-plaecholder
+					position: absolute
+
+					width: 100%
+					height: 100%
+
+					top: 0
+					left: 0
+
+					background-color: $blackTransparency
+
+			&-text
+				padding: 50px
+
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+
+				&-block
+					&__subtitle
+						font-size: 32px
+						color: $mainColor
+
+					&__title
+						font-size: 42px
+						margin-bottom: 15px
+
+					&__description
+						width: 60%
+						font-size: 24px
+
+	// tools
+	&-tools
+		margin-bottom: 75px
+
+		&-wrapper
+			display: flex
+			justify-content: space-between
+
+		&__title
+			width: 45%
+			font-size: 64px
+
+		&-items-wrapper
+			width: 50%
+
+		&-item
+			padding: 25px
+			border: 2px solid $mainColor
+
+			margin-bottom: 15px
+
+			+borderRadiusBlock
+
+			&:last-child
+				margin-bottom: 0
+
+			&__title
+				font-size: 42px
+				line-height: 60px
+				color: $mainColor
+
+	// salary
+	&-salary
+		margin-bottom: 75px
+
+		&-wrapper
+			display: flex
+			justify-content: space-between
+
+			padding: 50px 50px 65px 50px
+			background-color: $backgroundGray
+
+			+borderRadiusBlock
+
+		&__title
+			font-size: 64px
+
+			width: 500px
+
+		&-text
+			width: 50%
+
+			&__subtitle
+				color: $mainColor
+				font-size: 72px
+				display: block
+
+			&__price
+				display: block
+
+				color: $mainColor
+				font-size: 160px
+
+				margin-top: -20px
+				margin-bottom: 25px
+
+			&__description
+				font-size: 24px
+
+	// certificate
+	&-certificate
+		background-color: $mainColor
+		color: $white
+
+		padding: 50px 0 75px 0
+
+		margin-bottom: 75px
+
+		&__title
+			font-size: 64px
+			width: 75%
+
+			margin-bottom: 75px
+
+		&-image
+			width: 60%
+
+			&__image
+				width: 100%
+
+				+borderRadiusBlock
+
+	// works
+	&-works
+		margin: 0 75px 100px 75px
+
+		&__title
+			font-size: 64px
+			margin-bottom: 50px
+
+		&-images-wrapper
+			position: relative
+
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+			overflow: hidden
+
+			+borderRadiusBlock
+
+			&.short
+				height: 1350px
+
+		&-images
+			&__btn
+				position: absolute
+
+				bottom: 25px
+				left: 25px
+
+				width: calc( 100% - 50px )
+
+		&-image
+			width: calc( 100% / 3 )
+			height: 650px
+
+			+backgroundSetting
+
+	// buy
+	&-buy
+		margin-bottom: 100px
+
+		&-wrapper
+			display: flex
+			justify-content: center
+			align-items: center
+
+			padding: 100px 50px
+			background-color: $backgroundGray
+
+			+borderRadiusBlock
+
+		&-info
+			width: 550px
+			margin-right: 75px
+
+			&__subtitle
+				color: $mainColor
+				font-size: 32px
+				margin-bottom: 10px
+
+			&__title
+				font-size: 42px
+
+				margin-bottom: 25px
+
+			&-price
+				display: flex
+				align-items: center
+
+				margin-bottom: 15px
+
+				&__price
+					color: $mainColor
+					font-size: 58px
+
+				&__old
+					position: relative
+
+					margin-left: 35px
+					font-size: 58px
+
+					color: $gray
+
+					&::before
+						content: ""
+						position: absolute
+
+						top: 55%
+						left: 50%
+
+						transform: translateX(-50%) rotate(-15deg)
+
+						width: calc( 100% + 30px )
+						height: 4px
+
+						background-color: $gray
+
+			&-timer
+				display: inline-flex
+				align-items: center
+
+				padding: 10px 15px
+
+				background-color: $mainColor
+				color: $white
+
+				text-align: center
+
+				border-radius: 20px
+
+				margin-bottom: 25px
+
+				&-block
+					margin-right: 25px
+
+					&:last-child
+						margin-right: 0
+
+			&-service
+				&__item
+					color: $mainColor
+					font-size: 24px
+
+					& svg
+						margin-right: 10px
+						width: 20px
+
+		&-form-wrapper
+			width: 600px
+
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&-form
+			width: 100%
+
+			padding: 50px 35px
+			background-color: $white
+
+			+borderRadiusBlock
+
+			&-steps
+				overflow-x: auto
+
+				width: 100%
+
+				display: inline-flex
+				align-items: center
+				justify-content: center
+
+				margin-bottom: 35px
+
+				&-item
+					display: flex
+					align-items: center
+
+					margin: 0 15px
+
+					&.active &__number
+						color: $mainColor
+						background-color: $lightMainColor
+
+					&.active &__title
+						color: $black
+
+					&__number
+						user-select: none
+						margin-right: 10px
+
+						padding-bottom: 3px
+
+						border-radius: 50%
+						width: 30px
+						height: 30px
+
+						display: flex
+						justify-content: center
+						align-items: center
+
+						font-size: 15px
+						background-color: $borderGray
+						color: $gray
+
+					&__title
+						white-space: nowrap
+						font-size: 15px
+						user-select: none
+						color: $gray
+
+						margin-top: -3px
+
+				&-line
+					width: 10%
+					height: 1px
+
+					background-color: $borderGray
+
+			&__title
+				font-size: 32px
+				margin-bottom: 35px
+
+			&-input
+				margin-bottom: 15px
+
+			&__btn
+				width: 100%
+
+	// after-payment
+	&-after-payment
+		margin-bottom: 100px
+
+		&-wrapper
+			display: flex
+			flex-direction: column
+			align-items: center
+
+		&-text
+			text-align: center
+			margin-bottom: 50px
+
+			&__title
+				font-size: 42px
+				margin-bottom: 25px
+
+			&__description
+				font-size: 24px
+
+		&-image
+			width: 75%
+
+			&__image
+				width: 100%
+
+	// faq
+	&-faq
+		margin-bottom: 75px
+
+		&__title
+			font-size: 64px
+
+			margin-bottom: 50px
+
+		&-item
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+
+			position: relative
+
+			padding: 25px 35px 35px 35px
+
+			background-color: $backgroundGray
+
+			margin-bottom: 15px
+
+			+borderRadiusBlock
+
+			&:last-child
+				margin-bottom: 0
+
+			&__title
+				width: 40%
+
+				font-size: 36px
+
+			&__description
+				width: 50%
+				font-size: 28px
+
+/* MEDIA */
+@media screen and (max-width: 1400px)
+	.home
+		// skills
+		&-skills
+			&-text
+				flex-direction: column
+
+				&__description
+					width: 100%
+
+@media screen and (max-width: 1200px)
+	.home
+		// main
+		&-main
+			&-text
+				flex-direction: column
+
+				&__title, &__description
+					width: 100%
+
+				&__title
+					margin-bottom: 25px
+
+			&__image
+				margin-top: 35px
+
+		// forwho
+		&-forwho
+			&__title
+				width: 95%
+				font-size: 64px
+
+		// lessons
+		&-lessons
+			&-item
+				&-text
+					&-block
+						&__description
+							width: 100%
+
+		// tools
+		&-tools
+			&__title
+				font-size: 54px
+
+		// salary
+		&-salary
+			&-wrapper
+				flex-direction: column
+
+			&__title
+				width: 100%
+				margin-bottom: 50px
+
+			&-text
+				width: 100%
+
+		// certificate
+		&-certificate
+			padding: 25px 0 50px 0
+
+			&__title
+				width: 100%
+				font-size: 54px
+
+			&-image
+				width: 85%
+
+				&__image
+					border-radius: 25px
+
+		// works
+		&-works
+			margin: 0 25px 50px 25px
+
+			&-images-wrapper
+				&.short
+					height: 1000px
+
+			&-image
+				height: 400px
+
+		// buy
+		&-buy
+			&-wrapper
+				padding: 35px
+
+				flex-direction: column
+
+			&-info
+				width: 100%
+				margin-right: 0
+
+			&-form-wrapper
+				margin-top: 50px
+
+				width: 100%
+
+@media screen and (max-width: 900px)
+	.home
+		// main
+		&-main
+			&-wrapper
+				margin: 50px 0 25px 0
+
+			&-text
+				&__title
+					font-size: 64px
+
+		// forwho
+		&-forwho
+			margin-bottom: 75px
+
+			&__subtitle
+				font-size: 32px
+				margin-bottom: 10px
+
+			&__title
+				font-size: 42px
+
+		// skills
+		&-skills
+			padding: 50px 25px
+
+			&-text
+				&__title
+					width: 100%
+					font-size: 54px
+
+			&-item
+				padding: 25px 25px 30px 25px
+
+				&__title
+					font-size: 24px
+
+		// lessons
+		&-lessons
+			&-item
+				flex-direction: column
+
+				&-cover
+					width: 100%
+					min-width: 100%
+
+				&-text
+					padding: 15px 25px
+
+					&-block
+						&__subtitle
+							font-size: 24px
+
+						&__title
+							font-size: 32px
+
+						&__description
+							font-size: 24px
+
+		// tools
+		&-tools
+			&-wrapper
+				flex-direction: column
+
+			&__title
+				width: 100%
+				font-size: 42px
+
+				margin-bottom: 50px
+
+			&-items-wrapper
+				width: 100%
+
+		// certificate
+		&-certificate
+			margin-bottom: 25px
+
+			&__title
+				font-size: 42px
+
+		// buy
+		&-buy
+			margin-bottom: 50px
+
+		// after-payment
+		&-after-payment
+			margin-bottom: 50px
+
+			&-text
+				margin-bottom: 25px
+
+				&__title
+					font-size: 32px
+
+				&__description
+					font-size: 21px
+
+			&-image
+				width: 100%
+
+		// faq
+		&-faq
+			margin-bottom: 35px
+
+			&__title
+				font-size: 54px
+
+			&-item
+				flex-direction: column
+
+				&__title
+					margin-bottom: 25px
+
+				&__title, &__description
+					width: 100%
+
+@media screen and (max-width: 600px)
+	.home
+		&__btn
+			width: calc( 100% - 10px )
+			right: 5px
+			bottom: 5px
+
+		// main
+		&-main
+			&-text
+				&__title
+					font-size: 42px
+
+				&__description
+					font-size: 21px
+
+		// forwho
+		&-forwho
+			margin-bottom: 50px
+
+			&__subtitle
+				font-size: 28px
+
+			&__title
+				width: 100%
+				font-size: 32px
+
+		// skills
+		&-skills
+			margin-bottom: 35px
+
+			&-text
+				&__title
+					font-size: 42px
+
+				&__description
+					font-size: 24px
+
+		// tools
+		&-tools
+			margin-bottom: 35px
+
+			&__title
+				margin-bottom: 25px
+
+			&-item
+				padding: 20px
+
+				&__title
+					line-height: 30px
+					font-size: 32px
+
+		// salary
+		&-salary
+			margin-bottom: 35px
+
+			&-wrapper
+				padding: 35px 35px 45px 35px
+
+			&__title
+				font-size: 42px
+				margin-bottom: 25px
+
+			&-text
+				&__price
+					font-size: 100px
+
+		// certificate
+		&-certificate
+			&__title
+				font-size: 32px
+				margin-bottom: 50px
+
+		// works
+		&-works
+			margin: 0 25px 50px 25px
+
+			&__title
+				font-size: 42px
+				margin-bottom: 25px
+
+			&-images-wrapper
+				border-radius: 30px
+
+				&.short
+					height: 700px
+
+			&-image
+				height: 250px
+
+		// buy
+		&-buy
+			&-info
+				&__subtitle
+					font-size: 24px
+
+				&__title
+					font-size: 32px
+
+				&-price
+					&__price, &__old
+						font-size: 42px
+
+				&-service
+					&__item
+						font-size: 21px
+
+						& > svg
+							width: 15px
+
+			&-form
+				padding: 25px
+
+				&__title
+					font-size: 24px
+
+				&-steps
+					flex-direction: column
+					align-items: flex-start
+
+					margin-bottom: 15px
+
+					&-item
+						margin: 5px 0
+
+					&-line
+						display: none
+
+		// faq
+		&-faq
+			&__title
+				font-size: 42px
+
+@media screen and (max-width: 400px)
+	.home
+		// main
+		&-main
+			&-text
+				&__title
+					font-size: 28px
+					margin-bottom: 10px
+
+				&__description
+					font-size: 18px
+
+		// forwho
+		&-forwho
+			&__subtitle
+				font-size: 21px
+
+			&__title
+				width: 100%
+				font-size: 24px
+
+		// skills
+		&-skills
+			padding: 50px 15px
+
+			&-text
+				margin-bottom: 25px
+
+				&__title
+					font-size: 32px
+
+			&-item
+				padding: 15px
+
+				margin-bottom: 10px
+
+				border-radius: 25px
+
+				&__title
+					font-size: 18px
+
+		// lessons
+		&-lessons
+			&-item
+				margin-bottom: 10px
+
+				&-cover
+					height: 220px
+
+				&-text
+					padding: 15px
+
+					&-block
+						&__description
+							font-size: 18px
+
+		// salary
+		&-salary
+			&-wrapper
+				padding: 25px 25px 35px 25px
+
+			&-text
+				&__subtitle
+					font-size: 42px
+					margin-bottom: 10px
+
+				&__description
+					font-size: 21px
+
+				&__price
+					font-size: 60px
+
+		// certificate
+		&-certificate
+			&__title
+				font-size: 28px
+
+			&-image
+				width: 95%
+
+				&__image
+					border-radius: 15px
+
+		// works
+		&-works
+			&-images-wrapper
+				&.short
+					height: 500px
+
+			&-image
+				height: 170px
+
+		// buy
+		&-buy
+			&-wrapper
+				padding: 15px
+
+			&-info
+				&-timer
+					&-block
+						&__subtitle
+							font-size: 12px
+
+						&__title
+							font-size: 14px
+
+				&-service
+					&__item
+						font-size: 18px
+
+			&-form-wrapper
+				margin-top: 25px
+
+		// after-payment
+		&-after-payment
+			&-text
+				&__title
+					font-size: 24px
+
+				&__description
+					font-size: 18px
+
+		// faq
+		&-faq
+			&__title
+				font-size: 32px
+
+				margin-bottom: 25px
+
+			&-item
+				padding: 20px
+
+				&__title
+					font-size: 24px
+
+				&__description
+					font-size: 21px

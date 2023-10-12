@@ -1,0 +1,213 @@
+// header
+.header
+	margin: 35px 0
+
+	+openAnimation
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		&__image
+			width: 150px
+
+	&-nav
+		display: flex
+		align-items: center
+
+		&__link
+			cursor: pointer
+
+			color: $mainColor
+			font-size: 28px
+
+			margin: 0 20px
+
+			+transition
+
+			&:hover
+				color: $black
+
+				& > svg
+					transform: rotate(-45deg)
+					fill: $black
+
+			& > svg
+				width: 30px
+				fill: $mainColor
+
+				will-change: transform
+
+				margin-left: 10px
+
+				+transition
+
+			&.login
+				margin-right: 40px
+
+		&__btn
+			display: inline-block
+
+			cursor: pointer
+
+			border: none
+			background-color: $mainColor
+			color: $white
+
+			font-size: 21px
+
+			line-height: 30px
+
+			padding: 20px 35px
+
+			border-radius: 100px
+
+			will-change: transform
+
+			+PPPangram
+			+transition
+
+			&:hover
+				+transformScaleHover
+
+				& > svg
+					transform: rotate(-45deg)
+
+			&:active
+				+transformScaleClick
+
+			& > svg
+				width: 20px
+				fill: $white
+
+				will-change: transform
+
+				margin-left: 10px
+
+				+transition
+
+	&-media
+		display: none
+
+		&__btn
+			display: inline-block
+
+			cursor: pointer
+
+			border: none
+			color: $black
+
+			font-size: 21px
+
+			background-color: transparent
+
+			+PPPangram
+			+transition
+
+			& > svg
+				margin-left: 10px
+
+		&-nav
+			width: 150px
+
+			top: 65px
+
+			position: absolute
+			z-index: 2
+
+			padding: 15px
+
+			background-color: $backgroundGray
+
+			border-radius: 25px
+
+			opacity: 0
+			transform: scale3d(.90, .90, .90)
+
+			pointer-events: none
+
+			+transition
+
+			&.active
+				opacity: 1
+				transform: scale3d(1, 1, 1)
+				pointer-events: auto
+
+			&__link
+				display: block
+				font-size: 16px
+
+				margin-bottom: 15px
+
+				&:last-child
+					margin-bottom: 0
+
+@media screen and (max-width: 1200px)
+	.header
+		&-nav
+			&.main
+				display: none
+
+			&__link
+				margin-right: 15px
+				font-size: 24px
+
+		&-media
+			display: block
+			margin-right: 15px
+
+@media screen and (max-width: 900px)
+	.header
+		&-nav
+			&__link
+				font-size: 21px
+
+				&.login
+					margin-left: 0
+					margin-right: 15px
+
+			&__btn
+				font-size: 18px
+
+				padding: 15px 20px
+
+		&-logo
+			&__image
+				width: 120px
+
+@media screen and (max-width: 600px)
+	.header
+		margin: 15px 0 0 0
+
+		&-nav
+			&__link
+				&.login
+					display: none
+
+		&-logo
+			&__image
+				width: 100px
+
+		&-media
+			&-nav
+				top: 55px
+
+@media screen and (max-width: 420px)
+	.header
+		&-nav
+			&__btn
+				font-size: 14px
+				padding: 5px 10px
+
+				& > svg
+					width: 15px
+
+		&-media
+			&__btn
+				font-size: 14px
+
+		&-logo
+			&__image
+				width: 80px

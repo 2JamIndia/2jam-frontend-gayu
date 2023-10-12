@@ -1,0 +1,144 @@
+// footer
+.footer
+	background-color: $white
+	z-index: 4
+
+	padding: 25px 0 50px 0
+	border-top: 1px solid $borderGray
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+	&-block
+		display: flex
+
+		&-logo
+			&__image
+				width: 120px
+
+		&-menu
+			display: flex
+
+			&-block
+				margin-left: 50px
+
+				&:first-child
+					margin-left: 75px
+
+				&__link
+					cursor: pointer
+
+					display: block
+					font-size: 18px
+
+					margin-bottom: 10px
+
+					+transition
+
+					&:hover
+						color: $mainColor
+
+					&.start
+						color: $mainColor
+
+					& > svg
+						width: 17px
+						fill: $mainColor
+						transform: rotate(-45deg)
+
+						margin-left: 5px
+
+		&-email
+			width: 250px
+
+			cursor: pointer
+
+			margin-bottom: 25px
+
+			&:last-child
+				margin-bottom: 0
+
+			&__subtitle
+				font-size: 16px
+
+			&__email
+				display: inline-flex
+				align-items: center
+
+				height: 33.5px
+
+				font-size: 21px
+				color: $mainColor
+
+				& > span
+					margin-left: 10px
+
+					padding: 0 7px 2px 7px
+					background-color: $backgroundGray
+
+					font-size: 12px
+					color: $black
+
+					animation: openText .4s
+
+					+borderRadius
+
+					&.close
+						animation: closeText .4s
+
+					& > svg
+						margin-left: 5px
+
+		&-social
+			& > svg
+				width: 40px
+				height: 40px
+
+@keyframes openText
+	0%
+		opacity: 0
+		transform: translateY(3px)
+
+	100%
+		opacity: 1
+		transform: translateY(0px)
+
+@keyframes closeText
+	0%
+		opacity: 1
+		transform: translateY(0px)
+
+	100%
+		opacity: 0
+		transform: translateY(3px)
+
+@media screen and (max-width: 900px)
+	.footer
+		padding: 25px 0
+		
+		&-wrapper
+			flex-direction: column
+
+		&-block
+			margin-top: 35px
+			flex-direction: column
+
+			&:first-child
+				margin-top: 0
+
+			&-menu
+				margin-top: 35px
+				flex-direction: column
+
+				&-block
+					margin-top: 10px
+					margin-left: 0
+
+					&:first-child
+						margin-left: 0
+
+					&__link
+						display: inline-block
+						margin-right: 15px
