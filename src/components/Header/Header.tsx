@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { Link as LinkScroll } from "react-scroll";
 
 import { HeaderMedia } from '../'
@@ -14,7 +15,18 @@ const Header: React.FC = () => {
 	}
 
 	return (
-		<>
+		<motion.div
+			initial={{
+				opacity: 0,
+				y: -15,
+			}}
+			whileInView={{
+				opacity: 1,
+				y: 0,
+				transition: { duration: .7 }
+			}}
+			viewport={{ once: true }}
+		>
 			<header className="header">
 				<div className="container">
 					<div className="header-wrapper">
@@ -106,7 +118,7 @@ const Header: React.FC = () => {
 					</div>
 				</div>
 			</header>
-		</>
+		</motion.div>
 	);
 };
 

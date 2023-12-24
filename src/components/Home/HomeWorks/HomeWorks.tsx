@@ -1,86 +1,67 @@
 import React from 'react'
+import Slider from "react-slick";
 
-import WorkImage1 from '../../../assets/images/works/work-1.jpg'
-import WorkImage2 from '../../../assets/images/works/work-2.jpg'
-import WorkImage3 from '../../../assets/images/works/work-3.jpg'
-import WorkImage4 from '../../../assets/images/works/work-4.jpg'
-import WorkImage5 from '../../../assets/images/works/work-5.jpg'
-import WorkImage6 from '../../../assets/images/works/work-6.jpg'
-import WorkImage7 from '../../../assets/images/works/work-7.jpg'
-import WorkImage8 from '../../../assets/images/works/work-8.jpg'
-import WorkImage9 from '../../../assets/images/works/work-9.jpg'
-import WorkImage10 from '../../../assets/images/works/work-10.jpg'
-import WorkImage11 from '../../../assets/images/works/work-11.jpg'
-import WorkImage12 from '../../../assets/images/works/work-12.jpg'
-import WorkImage13 from '../../../assets/images/works/work-13.jpg'
-import WorkImage14 from '../../../assets/images/works/work-14.jpg'
-import WorkImage15 from '../../../assets/images/works/work-15.jpg'
-import WorkImage16 from '../../../assets/images/works/work-16.jpg'
-import WorkImage17 from '../../../assets/images/works/work-17.jpg'
-import WorkImage18 from '../../../assets/images/works/work-18.jpg'
-import WorkImage19 from '../../../assets/images/works/work-19.jpg'
-import WorkImage20 from '../../../assets/images/works/work-20.jpg'
-import WorkImage21 from '../../../assets/images/works/work-21.jpg'
-import WorkImage22 from '../../../assets/images/works/work-22.jpg'
-import WorkImage24 from '../../../assets/images/works/work-24.jpg'
-import WorkImage25 from '../../../assets/images/works/work-25.jpg'
-import WorkImage26 from '../../../assets/images/works/work-26.jpg'
-import WorkImage27 from '../../../assets/images/works/work-27.jpg'
-import WorkImage28 from '../../../assets/images/works/work-28.jpg'
+import WorksImage from '../../../assets/images/works/works.jpg'
+import WorkImage1 from '../../../assets/images/works/work1.jpg'
+import WorkImage2 from '../../../assets/images/works/work2.jpg'
+import WorkImage3 from '../../../assets/images/works/work3.jpg'
 
 const HomeWorks: React.FC = () => {
-	const [isMore, setIsMore] = React.useState<boolean>(false)
-
 	const images = [
 		WorkImage1,
 		WorkImage2,
 		WorkImage3,
-		WorkImage4,
-		WorkImage5,
-		WorkImage6,
-		WorkImage7,
-		WorkImage8,
-		WorkImage9,
-		WorkImage10,
-		WorkImage11,
-		WorkImage12,
-		WorkImage13,
-		WorkImage14,
-		WorkImage15,
-		WorkImage16,
-		WorkImage17,
-		WorkImage18,
-		WorkImage19,
-		WorkImage20,
-		WorkImage21,
-		WorkImage22,
-		WorkImage24,
-		WorkImage25,
-		WorkImage26,
-		WorkImage27,
-		WorkImage28,
 	]
 
+	const SliderRef = React.useRef<any>(null)
+
+	let settings = {
+		fade: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+	};
+
+	const onClickPrev = () => {
+		SliderRef.current?.slickPrev()
+	}
+
+	const onClickNext = () => {
+		SliderRef.current?.slickNext()
+	}
+
 	return (
-		<section className='home-works' id='home-works'>
-			<h2 className="home-works__title">
-				My work
-			</h2>
+		<section className="home-works">
+			<div className="container">
+				<div className="home-works-wrapper">
+					<h2 className="home-works__title">
+						Ваш макияж будет выглядеть так
+					</h2>
 
-			<div className={`home-works-images-wrapper ${isMore ? "" : "short"}`}>
-				{images.map((image, index) => (
-					!isMore ? index <= 9 ? (
-						<div className="home-works-image" key={`home-works-image-${index}`} style={{ backgroundImage: `url("${image}")` }}></div>
-					) : null : (
-						<div className="home-works-image" key={`home-works-image-${index}`} style={{ backgroundImage: `url("${image}")` }}></div>
-					)
-				))}
+					<img src={WorksImage} alt="" className='home-works__image'/>
+					{/* <div className="home-works-slider-wrapper">
+						<button className="home-works-slider__btn prev" onClick={onClickPrev}>
+							<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" transform="rotate(180 25 25)" fill="#F4F4F4" />
+								<path d="M34.7403 26.6582C35.2782 26.6582 35.7143 26.2222 35.7143 25.6842C35.7143 25.1462 35.2782 24.7102 34.7403 24.7102V26.6582ZM14.571 24.9954C14.1906 25.3758 14.1906 25.9925 14.571 26.373L20.7697 32.5715C21.15 32.9521 21.7668 32.9521 22.1471 32.5715C22.5276 32.1912 22.5276 31.5745 22.1471 31.1941L16.6372 25.6842L22.1471 20.1743C22.5276 19.794 22.5276 19.1773 22.1471 18.7969C21.7668 18.4164 21.15 18.4164 20.7697 18.7969L14.571 24.9954ZM34.7403 24.7102H15.2598V26.6582L34.7403 26.6582V24.7102Z" fill="black" />
+							</svg>
+						</button>
 
-				{!isMore ? (
-					<button className="btn home-works-images__btn" onClick={() => setIsMore(true)}>
-						More works
-					</button>
-				) : null}
+						<Slider {...settings} ref={SliderRef} className='home-works-slider'>
+							{images.map((image, index) => (
+								<img src={`${image}`} alt="" className='home-works-slider__image' key={`home-works-slider__image-${index}`} />
+							))}
+						</Slider>
+
+						<button className="home-works-slider__btn next" onClick={onClickNext}>
+							<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="25" cy="25" r="25" fill="#F4F4F4" />
+								<path d="M15.2597 23.3418C14.7218 23.3418 14.2857 23.7778 14.2857 24.3158C14.2857 24.8538 14.7218 25.2898 15.2597 25.2898V23.3418ZM35.429 25.0046C35.8094 24.6242 35.8094 24.0075 35.429 23.627L29.2303 17.4285C28.85 17.0479 28.2332 17.0479 27.8529 17.4285C27.4724 17.8088 27.4724 18.4255 27.8529 18.8059L33.3628 24.3158L27.8529 29.8257C27.4724 30.206 27.4724 30.8227 27.8529 31.2031C28.2332 31.5836 28.85 31.5836 29.2303 31.2031L35.429 25.0046ZM15.2597 25.2898H34.7402V23.3418H15.2597V25.2898Z" fill="black" />
+							</svg>
+						</button>
+					</div> */}
+				</div>
 			</div>
 		</section>
 	)

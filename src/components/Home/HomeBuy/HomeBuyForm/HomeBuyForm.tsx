@@ -16,7 +16,7 @@ const HomeBuyForm: React.FC<InjectedFormProps> = ({ handleSubmit, invalid, submi
 				<div className="home-buy-form-steps-item active">
 					<span className="home-buy-form-steps-item__number">1</span>
 					<span className="home-buy-form-steps-item__title">
-						Create account
+						Email
 					</span>
 				</div>
 				<div className="home-buy-form-steps-line"></div>
@@ -47,17 +47,17 @@ const HomeBuyForm: React.FC<InjectedFormProps> = ({ handleSubmit, invalid, submi
 					/>
 				</div>
 
-				<div className="home-buy-form-input">
+				{/* <div className="home-buy-form-input">
 					<Field
 						component={RenderInput}
 						type="password"
 						name="password"
 						label="Password"
 					/>
-				</div>
+				</div> */}
 
 				<button className={`btn ${invalid || submitting || pristine || isSend ? "disabled" : ""} home-buy-form__btn`} disabled={invalid || submitting || pristine || isSend}>
-					Create an account
+					Buy course
 
 					{isSend ? <span className="loader"></span> : null}
 				</button>

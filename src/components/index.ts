@@ -1,10 +1,15 @@
-// All
-export { default as Loader } from "./All/Loader";
-export { default as RenderInput } from "./All/RenderInput";
-export { default as RenderSelect } from "./All/RenderSelect";
-export { default as RenderCheckbox } from "./All/RenderCheckbox";
-export { default as FileInput } from "./All/FileInput";
-export { default as VideoPlayer } from "./All/VideoPlayer";
+// UI
+export { default as Loader } from "./UI/Loader";
+export { default as RenderInput } from "./UI/RenderInput";
+export { default as RenderSelect } from "./UI/RenderSelect";
+export { default as RenderCheckbox } from "./UI/RenderCheckbox";
+export { default as FileInput } from "./UI/FileInput";
+// VideoPlayer
+export { default as VideoPlayer } from "./UI/VideoPlayer/VideoPlayer"
+// VideoPlayerCustom
+export { default as VideoPlayerCustom } from "./UI/VideoPlayer/VideoPlayerCustom/VideoPlayerCustom"
+export { default as VideoPlayerCustomVolume } from "./UI/VideoPlayer/VideoPlayerCustom/VideoPlayerCustomVolume"
+export { default as VideoPlayerCustomMenu } from "./UI/VideoPlayer/VideoPlayerCustom/VideoPlayerCustomMenu"
 
 // Header
 export { default as Header } from "./Header/Header";
@@ -17,34 +22,27 @@ export { default as HomeMain } from "./Home/HomeMain/HomeMain";
 export { default as HomeForWho } from "./Home/HomeForWho/HomeForWho";
 // HomeSkills
 export { default as HomeSkills } from "./Home/HomeSkills/HomeSkills";
+// HomeWorks
+export { default as HomeWorks } from "./Home/HomeWorks/HomeWorks";
+// HomeNeed
+export { default as HomeNeed } from "./Home/HomeNeed/HomeNeed";
+// HomeMaster
+export { default as HomeMaster } from "./Home/HomeMaster/HomeMaster";
 // HomeLessons
 export { default as HomeLessons } from "./Home/HomeLessons/HomeLessons";
 export { default as HomeLessonsItem } from "./Home/HomeLessons/HomeLessonsItem";
 // HomeLessonsVideo
 export { default as HomeLessonsVideo } from "./Home/HomeLessons/HomeLessonsVideo/HomeLessonsVideo";
 
-// HomeTools
-export { default as HomeTools } from "./Home/HomeTools/HomeTools";
-
-// HomeSalary
-export { default as HomeSalary } from "./Home/HomeSalary/HomeSalary";
-
 // HomeCertificate
 export { default as HomeCertificate } from "./Home/HomeCertificate/HomeCertificate";
-
-// HomeWorks
-export { default as HomeWorks } from "./Home/HomeWorks/HomeWorks";
 
 // HomeBuy
 export { default as HomeBuy } from "./Home/HomeBuy/HomeBuy";
 // HomeBuyInfo
 export { default as HomeBuyInfo } from "./Home/HomeBuy/HomeBuyInfo/HomeBuyInfo";
-export { default as HomeBuyInfoTimer } from "./Home/HomeBuy/HomeBuyInfo/HomeBuyInfoTimer";
 // HomeBuyForm
 export { default as HomeBuyForm } from "./Home/HomeBuy/HomeBuyForm/HomeBuyForm";
-
-// HomeAfterPayment
-export { default as HomeAfterPayment } from "./Home/HomeAfterPayment/HomeAfterPayment";
 
 // HomeFaq
 export { default as HomeFaq } from "./Home/HomeFaq/HomeFaq";

@@ -1,15 +1,30 @@
 // home
 .home
 	&__btn
+		display: block
+
+		cursor: pointer
+
+		border: none
+		background-color: $mainColor
+		color: $white
+
+		font-size: 21px
+
+		padding: 20px 50px
+		line-height: 35px
+
+		border-radius: 100px
+
 		position: fixed
 		width: 300px
 
-		bottom: 20px
 		right: 15px
+		bottom: 15px
 
-		z-index: 2
+		z-index: 20
 
-		border: 3px solid $white
+		+PPPangram
 
 	// main
 	&-main
@@ -22,97 +37,520 @@
 
 		&-text
 			display: flex
-			justify-content: space-between
-			align-items: flex-start
+			flex-direction: column
+			align-items: center
+			text-align: center
+
+			&-logo
+				margin-bottom: 25px
+
+				&__image
+					width: 170px
 
 			&__title
-				width: 60%
+				width: 75%
+				font-size: 100px
 
-				font-size: 82px
+				margin-bottom: 50px
 
-				margin-top: -25px
+				& > span
+					color: $mainColor
 
 			&__description
-				width: 35%
-				font-size: 24px
+				width: 75%
+				font-size: 32px
 
 		&__image
 			margin-top: 75px
 
 			width: 100%
 
+		&-service
+			margin-top: 50px
+
+			display: flex
+			justify-content: space-between
+
+			&-block
+				width: calc( 25% - 7.5px )
+
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+
+				padding: 25px
+
+				background-color: $mainColor
+				color: $white
+
+				+borderRadius
+
+				&__title
+					font-size: 32px
+					margin-bottom: 15px
+
+				&__subtitle
+					font-size: 18px
+
 	// forwho
 	&-forwho
-		margin-bottom: 125px
+		margin-bottom: 75px
 
-		&__subtitle
-			font-size: 62px
-			color: $mainColor
+		&-wrapper
+			display: flex
+			align-items: center
+			justify-content: space-between
 
-			margin-bottom: 25px
+		&-text
+			width: 45%
 
-		&__title
-			width: 80%
-			font-size: 72px
+			&__title
+				font-size: 64px
+				margin-bottom: 75px
 
-			color: $black
+			&-item
+				display: flex
+				align-items: center
+
+				margin-bottom: 25px
+
+				& > svg
+					width: 35px
+					min-width: 35px
+
+					margin-right: 25px
+
+				&__text
+					font-size: 24px
+
+		&__image
+			width: 45%
 
 	// skills
 	&-skills
 		background-color: $mainColor
-		padding: 100px
+		padding: 50px 0 100px 0
 		color: $white
 
-		margin-bottom: 75px
+		margin-bottom: 25px
 
-		&-text
+		&-blocks
 			display: flex
 			justify-content: space-between
-
-			margin-bottom: 50px
+			align-items: flex-start
 
 			&__title
-				width: 700px
+				position: sticky
+				top: 50px
 
-				font-size: 72px
+				width: 35%
+				margin-bottom: 50px
+
+				font-size: 64px
 				margin-bottom: 25px
 
-				margin-top: -25px
+			&-wrapper
+				width: 60%
 
-			&__description
-				width: 40%
+			&-block
+				width: 100%
+				background-color: $white
 
-				font-size: 32px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
 
-		&-items-wrapper
+				padding: 30px
+
+				margin-bottom: 15px
+
+				+borderRadiusBlock
+
+				&__title
+					width: 85%
+
+					color: $black
+					font-size: 36px
+
+					margin-bottom: 35px
+
+				&-image
+					width: 100%
+					height: 250px
+
+					background-repeat: no-repeat
+					background-size: contain
+					background-position: center center
+
+		&-message
+			margin-top: 50px
+
 			display: flex
 			justify-content: space-between
-			flex-wrap: wrap
+			align-items: center
 
-		&-item
-			padding: 35px
+			padding: 30px
 
 			background-color: $white
 			color: $black
 
-			margin-bottom: 20px
-
-			will-change: transform
-
 			+borderRadiusBlock
-			+transition
 
 			&__title
+				font-size: 42px
+
+			&__subtitle
+				width: 400px
+				font-size: 21px
+
+			&__btn
+				width: 300px
+
+	// works
+	&-works
+		margin: 25px 0
+
+		&__title
+			font-size: 64px
+			margin-bottom: 50px
+
+		&__image
+			width: 100%
+
+		&-slider-wrapper
+			position: relative
+
+		&-slider
+			&__btn
+				cursor: pointer
+
+				position: absolute
+
+				top: 50%
+				transform: translateY(-50%)
+
+				z-index: 2
+
+				background-color: transparent
+				border: none
+
+				&.prev
+					left: 25px
+
+				&.next
+					right: 25px
+
+	// need
+	&-need
+		margin: 50px 0
+
+		background-color: $mainColor
+		padding: 50px 0 100px 0
+		color: $white
+
+		&__title
+			font-size: 64px
+			margin-bottom: 50px
+
+		&-block-wrapper
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+
+		&-block
+			width: calc( 50% - 7.5px )
+
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+
+			background-color: $white
+			color: $black
+
+			padding: 30px
+
+			margin-bottom: 15px
+
+			+borderRadiusBlock
+
+			&:nth-last-child(-n+2)
+				margin-bottom: 0
+
+			&__number
+				display: flex
+				justify-content: center
+				align-items: center
+
+				width: 75px
+				height: 75px
+
+				font-size: 32px
+				color: $mainColor
+				background-color: $lightMainColor
+
+				border-radius: 50%
+
+				margin-bottom: 25px
+
+			&__title
+				width: 85%
 				font-size: 32px
 
-				line-height: 30px
+	// master
+	&-master
+		margin: 50px 0
 
-			&:hover
-				+transformScaleHover
+		&-wrapper
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+
+		&__title
+			width: 40%
+
+			font-size: 54px
+
+			margin-bottom: 75px
+
+		&-top
+			width: 55%
+			// display: flex
+			// justify-content: space-between
+			// align-items: flex-start
+
+			&-title
+				display: flex
+				align-items: center
+
+				margin-bottom: 25px
+
+				&__name
+					margin-left: 25px
+
+					font-size: 42px
+
+				&__subscribers
+					margin-left: 50px
+					font-size: 24px
+
+					padding: 15px 20px
+
+					background-color: $backgroundGray
+
+					+borderRadius
+
+				&-avatar
+					width: 150px
+					min-width: 150px
+					height: 150px
+
+					will-change: transform
+
+					border-radius: 50%
+
+					+backgroundSetting
+					+transition
+
+			&-description
+				width: 90%
+
+				margin-bottom: 50px
+
+				&__text
+					font-size: 24px
+
+			&-magazine
+				&__title
+					font-size: 32px
+					margin-bottom: 50px
+
+				&-block-wrapper
+					display: flex
+					justify-content: space-between
+					flex-wrap: wrap
+
+				&-block
+					display: flex
+					justify-content: center
+					align-items: center
+
+					width: 50%
+
+					margin-bottom: 50px
+
+					// will-change: transform
+
+					opacity: 0.5
+
+					+transition
+
+					&:hover
+						opacity: 1
+
+					&__logo
+						width: 70%
+
+		// &-works
+		// 	margin-top: 50px
+
+		// 	&__title
+		// 		display: inline-block
+
+		// 		margin-left: 35%
+
+		// 		font-size: 32px
+
+		// 		margin-bottom: 50px
+
+		// 	&-modal
+		// 		display: flex
+		// 		justify-content: center
+		// 		align-items: center
+
+		// 		position: fixed
+		// 		z-index: 100
+
+		// 		top: 0
+		// 		left: 0
+
+		// 		width: 100%
+		// 		height: 100%
+
+		// 		background-color: $blackTransparency
+
+		// 		opacity: 0
+
+		// 		visibility: hidden
+		// 		pointer-events: none
+
+		// 		+transition
+
+		// 		&.active
+		// 			opacity: 1
+
+		// 			visibility: visible
+		// 			pointer-events: auto
+
+		// 		&-close
+		// 			position: absolute
+		// 			cursor: pointer
+
+		// 			will-change: transform
+
+		// 			top: 25px
+		// 			right: 25px
+
+		// 			width: 60px
+		// 			height: 60px
+
+		// 			+transition
+
+		// 			&:hover
+		// 				transform: scale(0.98)
+
+		// 			&:active
+		// 				+transformScale
+
+		// 		&-video
+		// 			&-iframe
+		// 				width: 600px
+		// 				height: 95%
+
+		// 				overflow: hidden
+
+		// 				+borderRadiusBlock
+
+		// 				& > iframe
+		// 					+borderRadiusBlock
+
+		// 		&-image-content
+		// 			display: inline-block
+
+		// 			width: 95%
+		// 			height: 95%
+
+		// 			&-image
+		// 				width: 100%
+		// 				height: 100%
+
+		// 				background-repeat: no-repeat
+		// 				background-size: contain
+		// 				background-position: center center
+
+		// 	&-items-wrapper
+		// 		display: flex
+		// 		justify-content: center
+		// 		flex-wrap: wrap
+
+		// 	&-item-image
+		// 		cursor: zoom-in
+
+		// 		width: calc( 100% / 5 - 10px )
+		// 		height: 370px
+
+		// 		margin: 5px
+
+		// 		will-change: transform
+
+		// 		+backgroundSetting
+		// 		+borderRadiusBlock
+
+		// 		+transition
+
+		// 		&:hover
+		// 			transform: scale(0.99)
+
+		// 		&:active
+		// 			+transformScale
+
+		// 	&-item-video
+		// 		cursor: pointer
+
+		// 		display: flex
+		// 		justify-content: center
+		// 		align-items: center
+
+		// 		overflow: hidden
+
+		// 		width: calc( 100% / 5 - 10px )
+		// 		height: 350px
+
+		// 		margin: 5px
+
+		// 		will-change: transform
+
+		// 		border-radius: 180px
+
+		// 		+backgroundSetting
+		// 		+transition
+
+		// 		&:hover
+		// 			transform: scale(0.99)
+
+		// 		&:active
+		// 			+transformScale
+
+		// 		&__btn
+		// 			cursor: pointer
+		// 			padding: 8px 14px 8px 8px
+
+		// 			display: flex
+		// 			justify-content: center
+		// 			align-items: center
+
+		// 			font-size: 17px
+
+		// 			color: $black
+
+		// 			border: none
+		// 			border-radius: 100px
+
+		// 			& > svg
+		// 				margin-right: 10px
 
 	// lesson
 	&-lessons
-		margin-bottom: 75px
+		margin-bottom: 150px
 
 		&-video
 			width: 100%
@@ -120,27 +558,27 @@
 			+borderRadiusBlock
 
 		&-items-wrapper
-			margin-top: 25px
+			margin-top: 75px
+
+			display: flex
+			flex-direction: column
+			align-items: center
 
 		&-item
+			width: 75%
+
 			display: flex
 
-			padding: 5px 5px 10px 5px
-
-			border: 2px solid $black
-
-			will-change: transform
-
-			margin-bottom: 20px
-
-			+borderRadiusBlock
-			+transition
+			margin-bottom: 25px
 
 			&:last-child
 				margin-bottom: 0
 
-			&:hover
-				+transformScaleHover
+			&:nth-child(2n) &-cover
+				order: 2
+
+			&:nth-child(2n) &-text
+				padding: 50px 100px 50px 0
 
 			&-cover
 				display: flex
@@ -149,122 +587,38 @@
 
 				position: relative
 
-				height: 350px
-				min-width: 350px
-				width: 350px
+				min-width: 500px
+				width: 500px
+				height: 500px
 
 				border-radius: 50px
 
 				overflow: hidden
 
-				+backgroundSetting
-
-				&-icon
-					z-index: 2
-
-					& > svg
-						width: 60px
-						height: 60px
-
-				&-plaecholder
-					position: absolute
-
-					width: 100%
-					height: 100%
-
-					top: 0
-					left: 0
-
-					background-color: $blackTransparency
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: contain
 
 			&-text
-				padding: 50px
+				padding: 50px 0 50px 100px
 
 				display: flex
 				flex-direction: column
-				justify-content: space-between
+				justify-content: center
 
 				&-block
 					&__subtitle
 						font-size: 32px
 						color: $mainColor
+						margin-bottom: 25px
 
 					&__title
-						font-size: 42px
-						margin-bottom: 15px
+						font-size: 54px
+						margin-bottom: 25px
 
 					&__description
-						width: 60%
-						font-size: 24px
-
-	// tools
-	&-tools
-		margin-bottom: 75px
-
-		&-wrapper
-			display: flex
-			justify-content: space-between
-
-		&__title
-			width: 45%
-			font-size: 64px
-
-		&-items-wrapper
-			width: 50%
-
-		&-item
-			padding: 25px
-			border: 2px solid $mainColor
-
-			margin-bottom: 15px
-
-			+borderRadiusBlock
-
-			&:last-child
-				margin-bottom: 0
-
-			&__title
-				font-size: 42px
-				line-height: 60px
-				color: $mainColor
-
-	// salary
-	&-salary
-		margin-bottom: 75px
-
-		&-wrapper
-			display: flex
-			justify-content: space-between
-
-			padding: 50px 50px 65px 50px
-			background-color: $backgroundGray
-
-			+borderRadiusBlock
-
-		&__title
-			font-size: 64px
-
-			width: 500px
-
-		&-text
-			width: 50%
-
-			&__subtitle
-				color: $mainColor
-				font-size: 72px
-				display: block
-
-			&__price
-				display: block
-
-				color: $mainColor
-				font-size: 160px
-
-				margin-top: -20px
-				margin-bottom: 25px
-
-			&__description
-				font-size: 24px
+						width: 90%
+						font-size: 32px
 
 	// certificate
 	&-certificate
@@ -279,7 +633,9 @@
 			font-size: 64px
 			width: 75%
 
-			margin-bottom: 75px
+			text-align: center
+
+			margin: 0 auto 75px auto
 
 		&-image
 			width: 60%
@@ -289,132 +645,111 @@
 
 				+borderRadiusBlock
 
-	// works
-	&-works
-		margin: 0 75px 100px 75px
-
-		&__title
-			font-size: 64px
-			margin-bottom: 50px
-
-		&-images-wrapper
-			position: relative
-
-			display: flex
-			flex-wrap: wrap
-			justify-content: space-between
-
-			overflow: hidden
-
-			+borderRadiusBlock
-
-			&.short
-				height: 1350px
-
-		&-images
-			&__btn
-				position: absolute
-
-				bottom: 25px
-				left: 25px
-
-				width: calc( 100% - 50px )
-
-		&-image
-			width: calc( 100% / 3 )
-			height: 650px
-
-			+backgroundSetting
-
 	// buy
 	&-buy
 		margin-bottom: 100px
 
 		&-wrapper
-			display: flex
-			justify-content: center
-			align-items: center
+			// display: flex
+			// justify-content: center
+			// align-items: center
 
-			padding: 100px 50px
+			// padding: 100px 50px
 			background-color: $backgroundGray
 
 			+borderRadiusBlock
 
 		&-info
-			width: 550px
-			margin-right: 75px
+			display: flex
+			justify-content: space-between
 
-			&__subtitle
-				color: $mainColor
-				font-size: 32px
-				margin-bottom: 10px
+			padding: 15px
 
-			&__title
-				font-size: 42px
+			&-text
+				width: 45%
 
-				margin-bottom: 25px
+				padding: 50px
 
-			&-price
-				display: flex
-				align-items: center
+				&__title
+					font-size: 54px
 
-				margin-bottom: 15px
+					margin-bottom: 15px
 
-				&__price
+				&-price
+					display: flex
+					align-items: center
+
+					margin-bottom: 15px
+
+					&__price
+						color: $mainColor
+						font-size: 58px
+
+					&__old
+						position: relative
+
+						margin-left: 35px
+						font-size: 58px
+
+						color: $gray
+
+						&::before
+							content: ""
+							position: absolute
+
+							top: 55%
+							left: 50%
+
+							transform: translateX(-50%) rotate(-15deg)
+
+							width: calc( 100% + 30px )
+							height: 4px
+
+							background-color: $gray
+
+				&-service
+					margin-bottom: 25px
+
+					&__item
+						color: $mainColor
+						font-size: 24px
+
+						& svg
+							margin-right: 10px
+							width: 20px
+
+				&__btn
+					width: 100%
+
+				&__subbtn
+					margin: 15px auto 0 auto
+
+					display: block
+
+					cursor: pointer
+					
+					border: none
+					background-color: transparent
 					color: $mainColor
-					font-size: 58px
 
-				&__old
-					position: relative
+					text-align: center
 
-					margin-left: 35px
-					font-size: 58px
+					padding-bottom: 5px
+					border-bottom: 1px solid $mainColor
 
-					color: $gray
+					font-size: 21px
 
-					&::before
-						content: ""
-						position: absolute
+					+PPPangram
+					+transition
 
-						top: 55%
-						left: 50%
+					&:hover
+						opacity: 0.5
 
-						transform: translateX(-50%) rotate(-15deg)
+			&-image
+				width: 50%
 
-						width: calc( 100% + 30px )
-						height: 4px
-
-						background-color: $gray
-
-			&-timer
-				display: inline-flex
-				align-items: center
-
-				padding: 10px 15px
-
-				background-color: $mainColor
-				color: $white
-
-				text-align: center
-
-				border-radius: 20px
-
-				margin-bottom: 25px
-
-				&-block
-					margin-right: 25px
-
-					&:last-child
-						margin-right: 0
-
-			&-service
-				&__item
-					color: $mainColor
-					font-size: 24px
-
-					& svg
-						margin-right: 10px
-						width: 20px
+				+backgroundSetting
+				+borderRadiusBlock
 
 		&-form-wrapper
 			width: 600px
@@ -488,7 +823,7 @@
 					background-color: $borderGray
 
 			&__title
-				font-size: 32px
+				font-size: 26px
 				margin-bottom: 35px
 
 			&-input
@@ -497,35 +832,9 @@
 			&__btn
 				width: 100%
 
-	// after-payment
-	&-after-payment
-		margin-bottom: 100px
-
-		&-wrapper
-			display: flex
-			flex-direction: column
-			align-items: center
-
-		&-text
-			text-align: center
-			margin-bottom: 50px
-
-			&__title
-				font-size: 42px
-				margin-bottom: 25px
-
-			&__description
-				font-size: 24px
-
-		&-image
-			width: 75%
-
-			&__image
-				width: 100%
-
 	// faq
 	&-faq
-		margin-bottom: 75px
+		margin-bottom: 50px
 
 		&__title
 			font-size: 64px
@@ -560,10 +869,20 @@
 				font-size: 28px
 
 /* MEDIA */
+@media screen and (max-width: 1800px)
+	.home
+		// skills
+		&-skills
+			&-block
+				&__title
+					font-size: 28px
+
 @media screen and (max-width: 1400px)
 	.home
 		// skills
 		&-skills
+			padding: 50px 0
+
 			&-text
 				flex-direction: column
 
@@ -574,6 +893,9 @@
 	.home
 		// main
 		&-main
+			&-wrapper
+				margin: 25px 0
+
 			&-text
 				flex-direction: column
 
@@ -591,6 +913,12 @@
 			&__title
 				width: 95%
 				font-size: 64px
+
+		// skills
+		&-skills
+			&-block
+				&.w50, &.w33
+					width: 100%
 
 		// lessons
 		&-lessons
@@ -633,14 +961,10 @@
 
 		// works
 		&-works
-			margin: 0 25px 50px 25px
+			margin: 0 0 50px 0
 
-			&-images-wrapper
-				&.short
-					height: 1000px
-
-			&-image
-				height: 400px
+			&__title
+				font-size: 42px
 
 		// buy
 		&-buy
@@ -849,20 +1173,16 @@
 
 		// works
 		&-works
-			margin: 0 25px 50px 25px
+			margin: 0 0 25px 0
 
 			&__title
-				font-size: 42px
-				margin-bottom: 25px
+				font-size: 32px
+				margin-bottom: 15px
 
-			&-images-wrapper
-				border-radius: 30px
-
-				&.short
-					height: 700px
-
-			&-image
-				height: 250px
+			&-nav
+				&__btn
+					width: 35px
+					height: 35px
 
 		// buy
 		&-buy
@@ -989,15 +1309,6 @@
 
 				&__image
 					border-radius: 15px
-
-		// works
-		&-works
-			&-images-wrapper
-				&.short
-					height: 500px
-
-			&-image
-				height: 170px
 
 		// buy
 		&-buy

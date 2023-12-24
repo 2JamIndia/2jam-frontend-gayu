@@ -5,10 +5,15 @@ import { Link as LinkScroll } from "react-scroll";
 import { FooterEmail } from '../../components/'
 
 import Logo from "../../assets/images/logo.svg";
+import Love from "../../assets/images/love.jpg";
 
 const Footer: React.FC = () => {
 	return (
 		<footer className="footer">
+			<p className="footer__title">
+				Create, learn, love, 2Jam <img src={Love} alt="" />
+			</p>
+
 			<div className="container">
 				<div className="footer-wrapper">
 					<div className="footer-block">
@@ -65,6 +70,13 @@ const Footer: React.FC = () => {
 								>
 									FAQ
 								</LinkScroll>
+
+								<Link
+									to="/refund-policy"
+									className="footer-block-menu-block__link"
+								>
+									Refund Policy
+								</Link>
 							</div>
 
 							<div className="footer-block-menu-block">

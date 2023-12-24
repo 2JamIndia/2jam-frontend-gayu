@@ -18,7 +18,7 @@ const HomeBuy: React.FC = () => {
 				<div className="home-buy-wrapper">
 					<HomeBuyInfo />
 
-					<HomeBuyForm onSubmit={onSubmit} />
+					{/* <HomeBuyForm onSubmit={onSubmit} /> */}
 				</div>
 			</div>
 		</div>

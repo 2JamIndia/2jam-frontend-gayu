@@ -14,7 +14,7 @@ import moment from "moment";
 
 import { Header, Footer } from "./components/";
 
-import { Home, Policy, PublicOffer } from "./pages/";
+import { Home, Policy, PublicOffer, RefundPolicy } from "./pages/";
 
 declare global {
 	interface Window {
@@ -63,7 +63,7 @@ const App: React.FC = () => {
 	return (
 		<>
 			<div className="wrapper">
-				{pathname.indexOf("/payment") !== -1 ||
+				{/* {pathname.indexOf("/payment") !== -1 ||
 					pathname.indexOf("/login") !== -1 ||
 					pathname.indexOf("/register") !== -1 ||
 					pathname === "/go/password-recovery" ||
@@ -71,11 +71,13 @@ const App: React.FC = () => {
 					pathname.indexOf("/go/cabinet/subscribe/disable") !==
 					-1 ? null : (
 					<Header />
-				)}
+				)} */}
 
 				<React.Suspense fallback={<></>}>
 					<Routes>
 						<Route path="/" element={<Home />} />
+
+						<Route path="/refund-policy" element={<RefundPolicy />} />
 
 						{/* <Route path="/policy" element={<Policy />} /> */}
 
